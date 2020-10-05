@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const DropdownContent = styled.option`
 	position: absolute;
-	background-color: #f9f9f9;
+	background-color: black;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 2);
 	padding: 12px 16px;
@@ -19,11 +19,10 @@ const Dropdown = styled.select`
 	background: transparent;
 	border: none;
 	font-size: xx-large;
+	color:white;
 `;
 
-const CurrencySelector = ({ doChange }) => {
-	const options = ["GBP", "EUR", "USD"];
-
+const CurrencySelector = ({ doChange,options }) => {
 	return (
 		<Dropdown onChange={({target}) => doChange(target.value)}>
 			{options.map((option, index) => (
